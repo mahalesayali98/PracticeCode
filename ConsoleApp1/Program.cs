@@ -57,7 +57,28 @@ var Games = new List<Game>
 //{
 //    Console.WriteLine($"Price is greator than 30 :{price.title}");
 //}
-var highestRating = Games.Max(x => x.Rating);
-var Allgame = Games.First(g => g.Rating == highestRating);
-Console.WriteLine($"this is highest rated game : {Allgame.title}");
-//
+//var highestRating = Games.Max(x => x.Rating);
+//var Allgame = Games.First(g => g.Rating == highestRating);
+//Console.WriteLine($"this is highest rated game : {Allgame.title}");
+
+//var GroupbyGenre = Games.GroupBy(g => g.Genre);
+//foreach( var group in GroupbyGenre)
+//{
+//    Console.WriteLine($" Genre : {group.Key}");
+//    foreach(var game in group)
+//    {
+//        Console.WriteLine(game.title);
+//    }
+//}
+
+//var GamesOnCondition = Games.Where(g => g.ReleaseYear >= 2025)
+//                       .OrderBy(g => g.Price > 30)
+//                       .Select(g => $"{g.title} - {g.ReleaseYear} ");
+//foreach (var Gam in GamesOnCondition)
+//    Console.WriteLine($"{Gam}");
+
+var GamesOnCondition = Games.Where(g => g.Price > 30)
+                       .OrderBy(g => g.ReleaseYear)
+                       .Select(g => $"{g.title} - {g.Rating}");
+foreach (var game in GamesOnCondition)
+    Console.WriteLine(game);
