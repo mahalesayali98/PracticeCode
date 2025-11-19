@@ -60,3 +60,4 @@ var Games = new List<Game>
 var highestRating = Games.Max(x => x.Rating);
 var Allgame = Games.First(g => g.Rating == highestRating);
 Console.WriteLine($"this is highest rated game : {Allgame.title}");
+//
