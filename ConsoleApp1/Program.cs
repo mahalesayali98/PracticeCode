@@ -77,8 +77,8 @@ var Games = new List<Game>
 //foreach (var Gam in GamesOnCondition)
 //    Console.WriteLine($"{Gam}");
 
-var GamesOnCondition = Games.Where(g => g.Price > 30)
-                       .OrderBy(g => g.ReleaseYear)
-                       .Select(g => $"{g.title} - {g.Rating}");
-foreach (var game in GamesOnCondition)
-    Console.WriteLine(game);
+//var GamesOnCondition = Games.Where(g => g.Price > 30)
+//                       .OrderBy(g => g.ReleaseYear)
+//                       .Select(g => $"{g.title} - {g.Rating}");
+//foreach (var game in GamesOnCondition)
+//    Console.WriteLine(game);
