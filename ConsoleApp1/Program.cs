@@ -13,6 +13,14 @@ var Games = new List<Game>
     new Game { title = "Tennis", Genre = "F" , Rating = 10.87, ReleaseYear = 2030 , Price = 100}
 };
 
+List<decimal> InvoicesAmount = new()
+{
+  120,136,120,1200.50m,
+
+};
+
+InvoiceFunction invoiceFunction = new();
+invoiceFunction.ValidateInvoices(InvoicesAmount);
 //List<string> AllGame = new List<string>();
 
 //foreach (var Game in Games)
